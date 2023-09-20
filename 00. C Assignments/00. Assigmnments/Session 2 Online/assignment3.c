@@ -38,11 +38,11 @@ void ArrayPrintReverse(char *Array, char Length);
 							Driving Code:
 	---------------------------------------------------------------------------*/
 
+#define ARRAY_LENGTH 3
+
 void main(void)
 {
 	//___________________________________New Approach___________
-	#define ARRAY_LENGTH 3
-
 	// Declare Array To Store Data Inside.
 	char Array[ARRAY_LENGTH];
 
@@ -81,7 +81,7 @@ void ArrayScan(char *Array, char Length)
 	for (char i = 0; i < Length; i++)
 	{
 		printf("Please enter number %d:\t", (i + 1));
-		scanf("%d", Array[i]);
+		scanf("%d", &Array[i]);
 	}
 }
 
