@@ -8,10 +8,6 @@
  *  --------------------------------------------------------------------------
  * Version	  Date				Author					Description
  * v1.0		  09 Sep, 2023		Abdelrahman Mourad		Initial Creation
- * ____________________________________________________________________________*/
+ * ____________________________________________________________________________
+*/
 
-#ifndef MCAL_DIO_DIO_PRIVATE_H_
-#define MCAL_DIO_DIO_PRIVATE_H_
-
-
-#endif /* MCAL_DIO_DIO_PRIVATE_H_ */
