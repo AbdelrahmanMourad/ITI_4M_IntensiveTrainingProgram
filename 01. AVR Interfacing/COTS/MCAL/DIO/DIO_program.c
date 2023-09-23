@@ -50,7 +50,8 @@
 
 /**
  * _________________________________API(1)_________________________________
- * @brief  Set The Direction Of Each Pin Of The Digital GPIO Ports To Be INPUT or OUTPUT.
+ * @brief  Set The Direction Of Each Pin Of The Digital GPIO Ports 
+ * 				, To Be INPUT or OUTPUT.
  * @note   None.
  * @param  Copy_u8PortName
  *         This parameter can be one of the following values:
@@ -196,7 +197,8 @@ void DIO_voidSetPinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8PinS
 
 /**
  * _________________________________API(3)_________________________________
- * @brief  Get The Value Of Each Input Pin Of The Digital GPIO Ports To Be INPUT or OUTPUT.
+ * @brief  Get The Value Of Each Input Pin Of The Digital GPIO Ports
+ * 				, To Be INPUT or OUTPUT.
  * @note   None.
  * @param  Copy_u8PortName
  *         This parameter can be one of the following values:
@@ -414,4 +416,4 @@ void DIO_voidSetPortAllValueAll(u8 Copy_u8PortName)
 	}
 }
 
-//___________________________________API_SET(5)__________________________________
+
