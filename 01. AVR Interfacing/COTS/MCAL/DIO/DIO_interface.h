@@ -29,14 +29,14 @@
 #define DIO_PORTD   3
 
 // All Pins.
-#define PIN0        0
-#define PIN1        1
-#define PIN2        2
-#define PIN3        3
-#define PIN4        4
-#define PIN5        5
-#define PIN6        6
-#define PIN7        7
+#define DIO_PIN0    0
+#define DIO_PIN1    1
+#define DIO_PIN2    2
+#define DIO_PIN3    3
+#define DIO_PIN4    4
+#define DIO_PIN5    5
+#define DIO_PIN6    6
+#define DIO_PIN7    7
 
 // For DDRxn.
 #define INPUT       0
@@ -63,8 +63,8 @@ void DIO_voidTogglePinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber);           
 void DIO_SetPortSpecificDirection(u8 Copy_u8PortName, u8 Copy_u8SpecificDirection);             // API(5).
 void DIO_SetPortSpecificValue(u8 Copy_u8PortName, u8 Copy_u8SpecificValue);                     // API(6).
 // Port General Set APIs:
-void DIO_voidSetPortDirection(u8 Copy_u8PortName, u8 Copy_u8PortDirection);                     // API(7).
-void DIO_voidSetPortValue(u8 Copy_u8PortName, u8 Copy_u8PortValue);                             // API(8).
+void DIO_voidSetPortDirectionAll(u8 Copy_u8PortName, u8 Copy_u8PortDirectionAll);               // API(7).
+void DIO_voidSetPortAllValueAll(u8 Copy_u8PortName, u8 Copy_u8PortValueAll);                    // API(8).
 
 
 #endif /* MCAL_DIO_DIO_INTERFACE_H_ */
