@@ -26,8 +26,4 @@
 #define GET_REG(REG_NAME)                           (REG_NAME)
 #define CLR_REG(REG_NAME)                           (REG_NAME = 0x00)
 
-
-
-
-
 #endif
