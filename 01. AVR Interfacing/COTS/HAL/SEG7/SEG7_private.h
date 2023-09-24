@@ -1,22 +1,28 @@
 /*_____________________________________________________________________________
  * Author:			Abdelrahman Mourad
- * Creation Date:	22 Sep, 2023
+ * Creation Date:	24 Sep, 2023
  * Version:			v1.0
  * Compiler:		GNU GCC
  * Controller:		ATmega32    (8-Bit Architecture)
  * Processor:		AVR         (8-Bit Architecture)
  * Layer:			MCAL
- * Driver:          DIO         (Digital Input/Output)
+ * Driver:          SEG7        (7-Segment)
  *  --------------------------------------------------------------------------
  * Version	  Date				Author					Description
- * v1.0		  22 Sep, 2023		Abdelrahman Mourad		Initial Creation
+ * v1.0		  24 Sep, 2023		Abdelrahman Mourad		Initial Creation
  * ____________________________________________________________________________
-*/
+ */
 
 /*  ----------------------------------------------
-                Header Guard File:
+                Header Guard File
     ---------------------------------------------- */
-#ifndef MCAL_DIO_DIO_CONFIG_H_
-#define MCAL_DIO_DIO_CONFIG_H_
+#ifndef MCAL_DIO_DIO_PRIVATE_H_
+#define MCAL_DIO_DIO_PRIVATE_H_
 
-#endif /* MCAL_DIO_DIO_CONFIG_H_ */
+/*  ----------------------------------------------
+                Register Addresses
+    ---------------------------------------------- 
+*/
+
+
+#endif /* MCAL_DIO_DIO_PRIVATE_H_ */
