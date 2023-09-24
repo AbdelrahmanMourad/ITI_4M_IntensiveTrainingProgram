@@ -20,9 +20,8 @@
 #include "../../LIB/STD_TYPES.h"
 #include "../../LIB/BIT_MATH.h"
 /*Lower Layer Inclusions*/
-
-/*Self Layer Inclusions*/
 #include "../../MCAL/DIO/DIO_interface.h"
+/*Self Layer Inclusions*/
 
 /*Self Files Inclusions*/
 #include "SEG7_interface.h"
