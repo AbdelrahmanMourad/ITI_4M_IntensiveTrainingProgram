@@ -50,7 +50,7 @@
 
 /**
  * _________________________________API(1)_________________________________
- * @brief  Set The Direction Of Each Pin Of The Digital GPIO Ports 
+ * @brief  Set The Direction Of Each Pin Of The Digital GPIO Ports
  * 				, To Be INPUT or OUTPUT.
  * @note   None.
  * @param  Copy_u8PortName
@@ -83,7 +83,6 @@ void DIO_voidSetPinDirection(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8
 			break;
 		}
 		break;
-
 	case (DIO_PORTB):
 		switch (Copy_u8PinDirection)
 		{
@@ -95,7 +94,6 @@ void DIO_voidSetPinDirection(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8
 			break;
 		}
 		break;
-
 	case (DIO_PORTC):
 		switch (Copy_u8PinDirection)
 		{
@@ -107,7 +105,6 @@ void DIO_voidSetPinDirection(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8
 			break;
 		}
 		break;
-
 	case (DIO_PORTD):
 		switch (Copy_u8PinDirection)
 		{
@@ -156,7 +153,6 @@ void DIO_voidSetPinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8PinS
 			break;
 		}
 		break;
-
 	case DIO_PORTB:
 		switch (Copy_u8PinState)
 		{
@@ -168,7 +164,6 @@ void DIO_voidSetPinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8PinS
 			break;
 		}
 		break;
-
 	case DIO_PORTC:
 		switch (Copy_u8PinState)
 		{
@@ -180,7 +175,6 @@ void DIO_voidSetPinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8PinS
 			break;
 		}
 		break;
-
 	case DIO_PORTD:
 		switch (Copy_u8PinState)
 		{
@@ -224,7 +218,7 @@ void DIO_voidGetPinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 *Copy_pu8Re
 	case DIO_PORTB:
 		*Copy_pu8ReturnedValue = GET_BIT(PINB, Copy_u8PinNumber);
 		break;
-	case DIO_PORTB:
+	case DIO_PORTC:
 		*Copy_pu8ReturnedValue = GET_BIT(PINC, Copy_u8PinNumber);
 		break;
 	case DIO_PORTD:
@@ -258,7 +252,7 @@ void DIO_voidTogglePinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber)
 	case DIO_PORTB:
 		TOG_BIT(PORTB, Copy_u8PinNumber);
 		break;
-	case DIO_PORTB:
+	case DIO_PORTC:
 		TOG_BIT(PORTC, Copy_u8PinNumber);
 		break;
 	case DIO_PORTD:
@@ -415,5 +409,3 @@ void DIO_voidSetPortAllValueAll(u8 Copy_u8PortName)
 		break;
 	}
 }
-
-
