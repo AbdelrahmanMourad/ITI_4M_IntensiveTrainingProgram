@@ -177,8 +177,7 @@ void DIO_voidTogglePinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber);
  * 				@arg 0b00000000 .. 0b11111111
  * @retval None.
  **/
-void DIO_SetPortSpecificDirection(u8 Copy_u8PortName, u8 Copy_u8SpecificDirection);
-
+void DIO_voidSetPortSpecificDirection(u8 Copy_u8PortName, u8 Copy_u8SpecificDirection);
 /**
  * _________________________________API(6)_________________________________
  * @brief  Set The Value Of Each Output Of The Digital GPIO Ports 
@@ -196,8 +195,7 @@ void DIO_SetPortSpecificDirection(u8 Copy_u8PortName, u8 Copy_u8SpecificDirectio
  * 				@arg 0b00000000 .. 0b11111111
  * @retval None.
  **/
-void DIO_SetPortSpecificValue(u8 Copy_u8PortName, u8 Copy_u8SpecificValue);
-
+void DIO_voidSetPortSpecificValue(u8 Copy_u8PortName, u8 Copy_u8SpecificValue);
 /**
 _________________________________API(7)_________________________________
  * @brief  Set The Direction Of ALL Port Register Of The Digital GPIO Ports 
@@ -231,6 +229,6 @@ _________________________________API(8)_________________________________
  *				@arg DIO_PORTD
  * @retval None.
  **/
-void DIO_voidSetPortAllValueAll(u8 Copy_u8PortName);
+void DIO_voidSetPortValueAll(u8 Copy_u8PortName);
 
 #endif /* MCAL_DIO_DIO_INTERFACE_H_ */

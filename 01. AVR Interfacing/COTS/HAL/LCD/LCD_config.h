@@ -19,21 +19,29 @@
 #ifndef HAL_LCD_LCD_CONFIG_
 #define HAL_LCD_LCD_CONFIG_
 
-
 /*  ----------------------------------------------
-                MODE Selection
+                Configurations
     ---------------------------------------------- */
-/*  --------
+/*  ----------------
+    Options:
+        DIO_PORTA
+        DIO_PORTB
+        DIO_PORTC
+        DIO_PORTD
+    ----------------*/
+// Ports
+#define LCD_DATA_PORT       DIO_PORTA
+#define LCD_CTRL_PORT       DIO_PORTB
+// Pins
+#define LCD_CTRL_PIN_RS     DIO_PIN0
+#define LCD_CTRL_PIN_RW     DIO_PIN1
+#define LCD_CTRL_PIN_EN     DIO_PIN2
+
+/*  ----------------
     Options:
         EIGHT_BIT_MODE
         FOUR_BIT_MODE
-    --------    */
-#define LCD_INIT_MODE   EIGHT_BIT_MODE
-
-
-
-
-
-
+    ----------------*/
+#define LCD_INIT_MODE EIGHT_BIT_MODE
 
 #endif /* HAL_LCD_LCD_CONFIG_ */
