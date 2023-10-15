@@ -169,7 +169,7 @@ void SEG7_voidCountDown_s(u8 Copy_u8Seg7Port, u8 Copy_CountTime)
  *				@arg 	Any {int} Number Of Seconds.
  * @retval  None
  **/
-void SEG7_voidCountDown_s(u8 Copy_u8Seg7Port, u8 Copy_CountTime)
+void SEG7_voidCountUp_s(u8 Copy_u8Seg7Port, u8 Copy_CountTime)
 {
 	s8 Local_s8LoopCounter = 0;
 	for (Local_s8LoopCounter; Local_s8LoopCounter <= Copy_CountTime; Local_s8LoopCounter++)
