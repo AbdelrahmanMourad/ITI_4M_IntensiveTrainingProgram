@@ -51,4 +51,108 @@
  **/
 
 
+
+/**
+ *  _________________________________API(1)_________________________________
+ *  @brief  Initialization Function of the LCD Modeule.
+ *  @fn     Pre-Build.
+ *  @note   None.
+ *  @param  void.
+ *  @retval void.
+ **/
+void LCD_voidInit(void);
+
+/**
+ * _________________________________API(3)_________________________________
+ * @brief  Sending Data to the LCD uC.
+ * @fn     Pre-Build.
+ * @note   It automatically move one cell each time we send new data.
+ * @param  Copy_u8Data
+ *         This parameter can be one of the following values:
+ *     			@arg LCD_FUNCTION_SET_CMD
+ *	            @arg LCD_DISPLAY_ON_OFF_CMD
+ *	            @arg LCD_DISPLAY_CLEAR_CMD
+ * @retval None.
+ **/
+void LCD_voidSendData(u8 Copy_u8Data);
+
+/**
+ * _________________________________API(5)_________________________________
+ * @brief  This API Clears All Display.
+ * @fn     Post-Build.
+ * @note   None.
+ * @param  void
+ * @retval void.
+ **/
+void LCD_voidClearDisplay(void);
+
+/**
+ *  _________________________________API(6)_________________________________
+ *  @brief  This API Let you Send Multi Digit Number To Display on LCD.
+ *  @fn     Post-Build.
+ *  @note   None.
+ *  @param  Copy_u32Number.
+ *           This parameter can be any number between
+ *              @arg    { 0 ... 4,294,967,295 }
+ *  @retval void.
+ **/
+void LCD_voidSendNumber(u32 Copy_u32Number);
+
+/**
+ * _________________________________API(7)_________________________________
+ * @brief  This API Let You Send String {Array of Char} to Display on the LCD.
+ * @fn     Post-Build.
+ * @note   None.
+ * @param  Copy_pu8StringArray
+ *          This parameter can be one of the following values:
+ *     			@arg Any String array. -> {u8 String[]}
+ * @retval void.
+ **/
+void LCD_voidSendString(u8 *Copy_pu8StringArray);
+
+/**
+ * _________________________________API(8)_________________________________
+ * @brief  This API Let You Start Typing from Chosen Location on the LCD.
+ * @fn     Post-Build.
+ * @note   None.
+ * @param  Copy_u8XPos
+ *          This parameter can be one of the following values:
+ *     			@arg 0 ... 1
+ * @param  Copy_u8YPos
+ *          This parameter can be one of the following values:
+ *     			@arg 0 ... 16
+ * @retval void.
+ **/
+void LCD_voidGoToXY(u8 Copy_u8XPos, u8 Copy_u8YPos);
+
+/**
+ * _________________________________API(9)_________________________________
+ * @brief  Send Custom Char Shape as array to be stored in the CGRAM
+ *          ,In Specific Pattern Number
+ *          , And Display on LCD In Specific X-Position and Y-Position.
+ * @fn     Post-Build.
+ * @note   None.
+ * @param  Copy_pu8CharacterArray
+ *           This parameter can be Any u8 Arra, Fill 1st 5-bits of the u8 numbers with the shape pattern.
+ *              @arg  u8 CharacterArray[8] = []
+ * @param  Copy_u8PatternNumber
+ *           This parameter is the Address Of CGRAM to Store The Array Pattern inside {from 0x8 to 8x8}
+ *           Each CGRAM is 5x8 dots represented as u8 array addresses
+ *           Pattern addresses start from 0 to 63 addresses, each pattern takes 8 addresses {from 0x8 to 8x8}.
+ *           This Parameter can be any number between:
+ *              @arg  {0 ... 8}.
+ * @param  Copy_u8XPos
+ *          This parameter can be one of the following values:
+ *     			@arg LCD_ROW_FIRST
+ *     			@arg LCD_ROW_SECOND
+ * @param  Copy_u8YPos
+ *          This parameter can be any number between:
+ *     			@arg {0 ... 16}.
+ * @retval void.
+ **/
+void LCD_voidSendCustomCharacter(u8 *Copy_pu8CharacterArray,
+                                 u8 Copy_u8PatternNumber,
+                                 u8 Copy_u8XPosition,
+                                 u8 Copy_u8YPosition);
+
 #endif /* HAL_LCD_LCD_INTERFACE_ */
