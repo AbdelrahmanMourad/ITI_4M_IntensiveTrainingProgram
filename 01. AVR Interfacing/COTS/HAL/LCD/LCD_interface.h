@@ -35,14 +35,14 @@
 /**
  * _______________________________________________
  *  @tableofcontents:
- *      API(1): LCD_voidInit(void).
- *      API(2): LCD_voidSendCommand(Copy_u8Command). @dir (Static..@private.h)
- *      API(3): LCD_voidSendData(Copy_u8Data).
- *      API(4): LCD_voidSendPulse(void). @dir (Static..@private.h)
- *      API(5): LCD_VoidClearDisplay(void).
- *      API(6): LCD_voidSendNumber(Copy_u32InputNumber).
- *      API(7): LCD_voidSendString(Copy_pu8InputStringArray).
- *      API(8): LCD_voidGoToXY(Copy_u8XPos, Copy_u8YPos).
+ *      API(1): LCD_voidInit(void).                                 @file: ( @interface.h )
+ *      API(2): LCD_voidSendCommand(Copy_u8Command).                @file: ( Static-> @private.h)
+ *      API(3): LCD_voidSendData(Copy_u8Data).                      @file: ( @interface.h )
+ *      API(4): LCD_voidSendEnablePulse(void).                      @file: ( Static-> @private.h)
+ *      API(5): LCD_VoidClearDisplay(void).                         @file: ( @interface.h )
+ *      API(6): LCD_voidSendNumber(Copy_u32InputNumber).            @file: ( @interface.h )
+ *      API(7): LCD_voidSendString(Copy_pu8InputStringArray).       @file: ( @interface.h )
+ *      API(8): LCD_voidGoToXY(Copy_u8XPos, Copy_u8YPos).           @file: ( @interface.h )
  *      API(9): LCD_voidSendCustomCharacter(Copy_pu8CharacterArray, 
  *                                          Copy_u8PatternNumber,
  *                                          Copy_u8XPosition,
