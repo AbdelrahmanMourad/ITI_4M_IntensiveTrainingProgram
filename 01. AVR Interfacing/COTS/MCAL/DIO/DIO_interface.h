@@ -66,18 +66,21 @@
 /**
  * _______________________________________________
  *  @tableofcontents:
- *      Pin Direction Configuration API Set:
- *          API(1).
- *      Pin Value Configuration API Set:
- *          API(2).
- *          API(3).
- *          API(4).
- *      Port Specific Config API Set:
- *          API(5).
- *          API(6).
- *      Port General Set APIs:
- *          API(7).
- *          API(8).
+ *      ___Pin Direction Configuration API Set___
+ *          API(1)	->	void DIO_voidSetPinDirection(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8PinDirection);
+ * 
+ *      ___Pin Value Configuration API Set___
+ *          API(2).	->	void DIO_voidSetPinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 Copy_u8PinState);
+ *          API(3).	->	void DIO_voidGetPinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber, u8 *Copy_pu8ReturnedValue);
+ *          API(4).	->	void DIO_voidTogglePinValue(u8 Copy_u8PortName, u8 Copy_u8PinNumber);
+
+ *      ___Port Specific Config API Set___
+ *          API(5).	->	void DIO_voidSetPortSpecificDirection(u8 Copy_u8PortName, u8 Copy_u8SpecificDirection);
+ *          API(6).	->	void DIO_voidSetPortSpecificValue(u8 Copy_u8PortName, u8 Copy_u8SpecificValue);
+
+ *      ___Port General Set APIs___
+ *          API(7).	->	void DIO_voidSetPortDirectionAll(u8 Copy_u8PortName);
+ *          API(8).	->	void DIO_voidSetPortValueAll(u8 Copy_u8PortName);
  * _______________________________________________
  **/
 
