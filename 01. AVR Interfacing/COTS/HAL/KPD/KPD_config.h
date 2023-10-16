@@ -41,7 +41,7 @@
 
 // Number of Columns and Rows.
 #define KPD_ROWS_NUM        4
-#define KPD_COLUMN_NUM      4
+#define KPD_COLUMNS_NUM     4
 
 // KeyPad LayOut.
 #define KPD_ARR_VAL_LAYOUT  { {'1', '2', '3', 'A'}\
