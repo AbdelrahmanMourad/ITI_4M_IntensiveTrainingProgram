@@ -19,4 +19,39 @@
 #ifndef MCAL_KPD_KPD_INTERFACE_H_
 #define MCAL_KPD_KPD_INTERFACE_H_
 
+/*  ----------------------------------------------
+                Definitions:
+    ---------------------------------------------- */
+
+
+/*  ---------------------------------------------------------------------------
+                            Functions ProtoTypes:
+    ---------------------------------------------------------------------------*/
+/**
+ * _______________________________________________
+ *  @tableofcontents:
+ *      API(1): KPD_voidInit(void)
+ *      API(2): KPD_u8GetPressedKey(void)
+ * _______________________________________________
+ **/
+
+/**
+_________________________________API(1)_________________________________
+ * @brief  Initialize by Setting Colemns and Rows Directions and Values
+ * @note   N/A.
+ * @param  void.
+ * @retval void.
+ **/
+void KPD_voidInit(void);
+
+/**
+_________________________________API()_________________________________
+ * @brief  Initialize by Setting Colemns and Rows Directions and Values
+ * @note   N/A.
+ * @param  void
+ * @retval Local_u8PressedKey
+ **/
+u8 KPD_u8GetPressedKey(void);
+
+
 #endif /*MCAL_KPD_KPD_INTERFACE_H_*/
