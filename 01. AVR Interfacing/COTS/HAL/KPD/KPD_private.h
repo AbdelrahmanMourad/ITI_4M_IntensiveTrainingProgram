@@ -25,10 +25,26 @@
     Short Summary:
     ==============
 
-        1.
-        2.
-        3.
+        1.  We Set Direction as follows:
+                Rows Input
+                Cols Output
+        
+        2.  We Set Values as follows:
+                Rows High.
+                Cols High.
+        
+        3.  We Iterate Cols and Make Them LOW (GND) one by one.
+                Iterate Rows with each Low Col.
+                    If Key Pressed => Row = 0 (Changed).
+                    If Not Pressed => Row = 1 (Default).
+        
+        4. When {Col:Low} and {Row:Low}.    
+                =>  Then PressedKey = VALUE_LAYOUT_2D_ARRAY [ThisRow][ThisCol].
 
+        5. Return The Value of PressedKey.
+
+        6. If No Key Was Pressed Return Specific Number.
+                #define KPD_NOT_PRESSED_VAL 255
 
     ---------------------------------------------------------------------------
 */
