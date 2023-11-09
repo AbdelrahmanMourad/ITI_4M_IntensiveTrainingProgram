@@ -1,6 +1,6 @@
 /*_____________________________________________________________________________
  * Author:			Abdelrahman Mourad
- * Creation Date:	16 Ocr, 2023
+ * Creation Date:	16 Oct, 2023
  * Version:			v1.0
  * Compiler:		GNU GCC
  * Controller:		ATmega32    (8-Bit Architecture)
