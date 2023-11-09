@@ -1,15 +1,15 @@
 /*_____________________________________________________________________________
  * Author:			Abdelrahman Mourad
- * Creation Date:	16 Ocr, 2023
+ * Creation Date:	09 Nov, 2023
  * Version:			v1.0
  * Compiler:		GNU GCC
  * Controller:		ATmega32    (8-Bit Architecture)
  * Processor:		AVR         (8-Bit Architecture)
  * Layer:			HAL
- * Driver:          KPD         (KeyPad 4x4)
+ * Driver:          LED         (Light Emissive Diode - LED)
  *  --------------------------------------------------------------------------
  * Version	  Date				Author					Description
- * v1.0		  16 Oct, 2023		Abdelrahman Mourad		Initial Creation
+ * v1.0		  09 Nov, 2023		Abdelrahman Mourad		Initial Creation
  * ____________________________________________________________________________
  */
 
@@ -20,8 +20,9 @@
 #include "../../LIB/STD_TYPES.h"
 #include "../../LIB/BIT_MATH.h"
 /*Lower Layer Inclusions*/
-#include "../../MCAL/DIO/DIO_interface.h"
+
 /*Self Layer Inclusions*/
+#include "../../MCAL/DIO/DIO_interface.h"
 /*Self Files Inclusions*/
 #include "LED_interface.h"
 #include "LED_private.h"
@@ -34,30 +35,77 @@
 /**
  * _______________________________________________
  *  @tableofcontents:
- *      API(1): KPD_voidInit(void)
- *      API(2): KPD_u8GetPressedKey(void)
+ *      API(1): void LED_voidInit(LED_t* Ledobj);
+ *      API(2): void LED_voidTurnOn(LED_t* Ledobj);
+ *      API(3): void LED_voidTurnOff(LED_t* Ledobj);
+ *      API(4): void LED_voidToggle(LED_t* Ledobj);
  * _______________________________________________
  **/
 
 /**
-_________________________________API(1)_________________________________
- * @brief  Initialize by Setting Columns and Rows Directions and Values
+ * _________________________________API(1)_________________________________
+ * @brief  Initialize LED PORT PIN by setting Direction to OUTPUT.
  * @note   N/A.
- * @param  void.
+ * @param  Ledobj
+ *         This is {Object from LED_t struct} can be one of the following values:
+ *     			@arg &LED1
+ *                  @note     LED_t LED1 { DIO_PORTA , DIO_PIN0     };
+ *                      OR:   LED_t LED1 {  .LED_PORT = DIO_PORTA,
+ *                                          .LED_PIN  = DIO_PIN0    };
  * @retval void.
  **/
-void KPD_voidInit(void)
+void LED_voidInit(LED_t *Ledobj)
 {
-
+    DIO_voidSetPinDirection(Ledobj->LED_PORT, Ledobj->LED_PIN, OUTPUT);
 }
 
 /**
-_________________________________API(2)_________________________________
- * @brief  Initialize by Setting Colemns and Rows Directions and Values
+ * _________________________________API(2)_________________________________
+ * @brief  SET LED PORT PIN Value to HIGH, to turn it on.
  * @note   N/A.
- * @param  void
- * @retval Local_u8PressedKey
+ * @param  Ledobj
+ *         This is {Object from LED_t struct} can be one of the following values:
+ *     			@arg &LED1
+ *                  @note     LED_t LED1 { DIO_PORTA , DIO_PIN0     };
+ *                      OR:   LED_t LED1 {  .LED_PORT = DIO_PORTA,
+ *                                          .LED_PIN  = DIO_PIN0    };
+ * @retval void.
  **/
-u8 KPD_u8GetPressedKey(void)
+void LED_voidTurnOn(LED_t *Ledobj)
 {
+    DIO_voidSetPinValue(Ledobj->LED_PORT, Ledobj->LED_PIN, HIGH);
+}
+
+/**
+ * _________________________________API(3)_________________________________
+ * @brief  SET LED PORT PIN Value to LOW, to turn it off.
+ * @note   N/A.
+ * @param  Ledobj
+ *         This is {Object from LED_t struct} can be one of the following values:
+ *     			@arg &LED1
+ *                  @note     LED_t LED1 { DIO_PORTA , DIO_PIN0     };
+ *                      OR:   LED_t LED1 {  .LED_PORT = DIO_PORTA,
+ *                                          .LED_PIN  = DIO_PIN0    };
+ * @retval void.
+ **/
+void LED_voidTurnOff(LED_t *Ledobj)
+{
+    DIO_voidSetPinValue(Ledobj->LED_PORT, Ledobj->LED_PIN, LOW);
+}
+
+/**
+ * _________________________________API(4)_________________________________
+ * @brief  Reverse LED PORT PIN Value, To Toggle the LED Status.
+ * @note   N/A.
+ * @param  Ledobj
+ *         This is {Object from LED_t struct} can be one of the following values:
+ *     			@arg &LED1
+ *                  @note     LED_t LED1 { DIO_PORTA , DIO_PIN0     };
+ *                      OR:   LED_t LED1 {  .LED_PORT = DIO_PORTA,
+ *                                          .LED_PIN  = DIO_PIN0    };
+ * @retval void.
+ **/
+void LED_voidToggle(LED_t *Ledobj)
+{
+    DIO_voidTogPinValue(Ledobj->LED_PORT, Ledobj->LED_PIN);
 }
